@@ -26,12 +26,8 @@ This solution extracts structured outlines from PDF documents, identifying title
 
 ```bash
 # Build
-docker build --platform linux/amd64 -t challenge1a:latest .
+docker build -t phase1a .
 
 # Run  
-docker run --rm \
-  -v $(pwd)/input:/app/input \
-  -v $(pwd)/output:/app/output \
-  --network none \
-  challenge1a:latest
+docker run --rm -v "$(pwd)/input:/app/input" -v "$(pwd)/output:/app/output" phase1a
 ```
